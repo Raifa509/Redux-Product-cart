@@ -6,7 +6,7 @@ const Pnf = () => {
     <>
 
       <div className='flex justify-center items-center flex-col h-screen'>
-        <img src="./404.gif" alt="" />
+        <img src="./404.gif" alt="" width={'500px'}/>
         <h3 className='text-xl '>Look like you're lost</h3>
         <h5 className='text-sm'>the page you are looking for not available</h5>
         <Link to={'/'}>

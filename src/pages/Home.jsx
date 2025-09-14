@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/Header'
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchAllProducts } from '../redux/slices/productSlice'
  
 const Home = () => {
+
+    const dispatch=useDispatch()
+    useEffect(()=>{
+      dispatch(fetchAllProducts())
+    },[])
+
+
+    const {loading,error, allProducts} = useSelector((state)=>state.productReducer)
+    console.log(loading,error,allProducts);
+    
+    
+
   return (
     <>
     <Header/>
