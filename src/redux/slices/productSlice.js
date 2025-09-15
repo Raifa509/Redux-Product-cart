@@ -5,6 +5,9 @@ export const fetchAllProducts=createAsyncThunk("products/fetchAllProducts",
     async ()=>{
         const response=await axios.get("https://dummyjson.com/products")
         // console.log(response.data.products);
+
+        sessionStorage.setItem("allProducts",JSON.stringify(response.data.products))
+
         return response.data.products
         
     }
@@ -15,7 +18,7 @@ const productSlice=createSlice({
     name:'products',
     initialState:{
         allProducts:[],
-        loading:false,
+        loading:true,
         error:""
     },
     reducers:{

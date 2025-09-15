@@ -34,16 +34,16 @@ const Footer = () => {
         <div>
         <h2 className=' text-xl font-bold py-2'>Contact Us</h2>
         <div>
-          <input type="text" class="border p-1 rounded bg-white placeholder-gray-400 me-2" placeholder="Enter your Email  here"  />
-         <i class="fa-solid fa-arrow-right"></i>
+          <input type="text" className="border p-1 rounded bg-white placeholder-gray-400 me-2" placeholder="Enter your Email  here"  />
+         <i className="fa-solid fa-arrow-right"></i>
         </div>
           <div className='flex justify-between my-4 cursor-pointer'>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-github"></i>
-           <i class="fa-solid fa-phone"></i>
+            <i className="fa-brands fa-twitter"></i>
+            <i className="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-facebook"></i>
+            <i className="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-github"></i>
+           <i className="fa-solid fa-phone"></i>
           </div>
         </div>
   </div>
