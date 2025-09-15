@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import  Header from "../components/Header";
 import { Link, useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToWishlist } from '../redux/slices/wishlistSlice';
 
 
 const View = () => {
 
+  const userWishlist=useSelector(state=>state.wishlistReducer)
 
+  const dispath=useDispatch()
+  
   const {id} = useParams()
   // console.log(id);
 
@@ -20,6 +24,21 @@ const View = () => {
   
   // console.log(product);
   
+  const handleAddToWishlist=()=>{
+    //check product is in store wishlist
+    const existingProduct=userWishlist?.find(item=>item.id==product.id)
+    if(existingProduct)
+    {
+      alert("Product already exist in your wishlist....Add another!!!")
+    }
+    else{
+      dispath(addToWishlist(product))
+    }
+  }
+
+
+
+  
   return (
     <>
     <Header/>
@@ -29,8 +48,8 @@ const View = () => {
 
         <img height={'250px'} width={'350px'} src={product?.thumbnail} alt="" />
         <div className='w-full  flex justify-around'>
-          <Link to={'/wishlist'} className='bg-blue-600 text-white p-3 rounded'>ADD TO WISHLIST</Link>
-          <Link to={'/cart'} className='bg-green-600 text-white p-3 rounded'>ADD TO CART</Link>
+          <button onClick={handleAddToWishlist} className='bg-blue-600 text-white p-3 rounded'>ADD TO WISHLIST</button>
+          <button  className='bg-green-600 text-white p-3 rounded'>ADD TO CART</button>
         </div>
         </div>
         <div className='p-5'>
