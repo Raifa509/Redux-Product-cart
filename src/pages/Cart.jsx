@@ -1,9 +1,12 @@
 import React from 'react'
 import Header from "../components/Header";
 import { Link } from 'react-router-dom';
-
+import { useDispatch, useSelector } from 'react-redux';
 
 const Cart = () => {
+
+  const userCart=useSelector(state=>state.cartReducer)
+
   return (
     <>
       <Header />
