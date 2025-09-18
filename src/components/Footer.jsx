@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className=' p-10  h-80 font-semibold bg-violet-900 text-white'>
+    <footer className=' p-10  h-80 font-semibold bg-violet-900 text-white mt-[10rem]'>
   <div className='flex justify-between'>
         <div style={{width:'400px'}}>
           <h2 className=' text-xl font-bold py-2'><i className="fa-solid fa-truck-fast me-2"></i>Daily cart</h2>
