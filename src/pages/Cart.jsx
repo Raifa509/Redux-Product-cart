@@ -89,10 +89,8 @@ const Cart = () => {
                     </tr>
                       )
                     }
-
                   </tbody>
                 </table>
-
                 <div className="float-right mt-4">
                   <button onClick={()=>dispatch(emptyCart())} className="bg-red-600 text-white text-sm px-2 py-1 me-2 rounded cursor-pointer">EMPTY CART</button>
                   <Link to={'/'}><button className="bg-blue-600 text-white text-sm px-2 py-1 rounded cursor-pointer">SHOP MORE</button></Link>
